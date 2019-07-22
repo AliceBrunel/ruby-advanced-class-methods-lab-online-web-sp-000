@@ -62,8 +62,8 @@ class Song
       # Make a new instance
     song = self.new # self refers to the Song class. This is Song.new
       # Set the properties on the song.
-      song.artist_name
-      song.name
+      song.artist_name = artist_name
+      song.name = name
     end
     song_file.join.delete_suffix!(".mp3")
   end 
