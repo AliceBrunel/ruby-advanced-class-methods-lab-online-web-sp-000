@@ -61,9 +61,9 @@ class Song
     song = self.new # self refers to the Person class. This is Person.new
       # Set the properties on the person.
       song.artist_name = artist
-      song.name = title
+      song.name = title.join
       #return the song
-      song.name
+      song.name.delete_suffix(".mp3")
     end
   end 
   
