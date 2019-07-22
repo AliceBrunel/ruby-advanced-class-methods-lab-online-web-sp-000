@@ -65,7 +65,7 @@ class Song
       song_file.artist = artist
       song_file.title = title
       #return the song
-      person
+      song.artist
     end
   end 
   
