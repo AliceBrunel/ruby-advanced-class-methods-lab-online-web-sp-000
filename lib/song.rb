@@ -47,7 +47,7 @@ class Song
     self.all.sort_by {|song| song.name}
   end
   
-  def self.new_from_filename(song_title)
+ def self.new_from_filename(song_title)
     # Split the data into an array of individual rows.
     rows = song_title.split("\n")
     
@@ -56,14 +56,16 @@ class Song
       
       # Split the row into 2 parts, artist name and title at the " - "
       data = row.split(" - ")
-      @artist_name = data[0]
-      @name = data[1]
+      artist_name = data[0]
+      name = data[1]
  
       # Make a new instance
     song = self.new # self refers to the Song class. This is Song.new
       # Set the properties on the song.
-      song.artist_name
+      song.artist_name = artist_name
+      song.name = name
     end
+    song_file.join.delete_suffix!(".mp3")
   end 
   
   def self.create_from_filename
