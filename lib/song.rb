@@ -50,12 +50,14 @@ class Song
   def self.new_from_filename(song_title)
     # Split the data into an array of individual rows.
     rows = song_title.split("\n")
+    
     # For each row, let's collect a Person instance based on the data
     song_file = rows.collect do |row|
-      # Split the row into 2 parts, artist name, title at the " - "
+      
+      # Split the row into 2 parts, artist name and title at the " - "
       data = row.split(" - ")
-      artist = data[0]
-      title = data[1]
+      @artist_name = data[0]
+      @name = data[1]
  
       # Make a new instance
     song = self.new # self refers to the Person class. This is Person.new
