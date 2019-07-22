@@ -55,7 +55,7 @@ class Song
     # For each row, let's collect a Person instance based on the data
     song_file = rows.collect do |row|
       # Split the row into 2 parts, artist name, title at the " - "
-      data = row.split(" - ")
+      data = row.split(" - ").remove(".mp3")
       artist = data[0]
       title = data[1]
  
