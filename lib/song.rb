@@ -44,7 +44,7 @@ class Song
   end
   
   def self.alphabetical
-    @@all.sort_by {|word| word}
+    self.sort_by {|word| word}
   end 
   
   def self.new_from_filename
