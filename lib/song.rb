@@ -44,6 +44,7 @@ class Song
   end
   
   def self.alphabetical
+    @@all.
   end 
   
   def self.new_from_filename
