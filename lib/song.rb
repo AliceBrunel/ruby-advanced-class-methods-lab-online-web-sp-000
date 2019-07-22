@@ -45,8 +45,7 @@ class Song
   
    def self.alphabetical
     self.all.sort_by {|song| song.name}
-    
-  end 
+  end
   
   def self.new_from_filename(song_title)
     # Split the data into an array of individual rows.
