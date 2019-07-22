@@ -56,12 +56,12 @@ class Song
       
       # Split the row into 2 parts, artist name and title at the " - "
       data = row.split(" - ")
-      @artist_name = data[0]
-      @name = data[1]
+      artist = data[0]
+      title = data[1]
  
       # Make a new instance
-    song = self.new # self refers to the Person class. This is Person.new
-      # Set the properties on the person.
+    song = self.new # self refers to the Song class. This is Song.new
+      # Set the properties on the song.
       song.artist_name = artist
       song.name = title
       #return the song
