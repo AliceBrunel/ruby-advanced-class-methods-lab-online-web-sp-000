@@ -63,7 +63,7 @@ class Song
       song.artist_name = artist
       song.name = title
       #return the song
-      song.name.delete_suffix(".mp3")
+      song.name
     end
   end 
   
