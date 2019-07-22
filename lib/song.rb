@@ -15,14 +15,16 @@ class Song
     
   end
 
-  def self.new_by_name=(name)
+  def self.new_by_name(name)
     song = self.new
     song.name = name
-    @@all << song
   end 
   
 
-  def self.create_by_name
+  def self.create_by_name(name)
+    song = self
+    song.name = name
+    @@all << song
   end 
   
   def self.find_by_name
