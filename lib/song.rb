@@ -49,7 +49,7 @@ class Song
   
   def self.new_from_filename(song_title)
     # Split the data into an array of individual rows.
-    rows = song_title.split("\n").remove(".mp3")
+    rows = song_title.remove(".mp3").split("\n")
     # For each row, let's collect a Person instance based on the data
     song_file = rows.collect do |row|
       # Split the row into 2 parts, artist name, title at the " - "
