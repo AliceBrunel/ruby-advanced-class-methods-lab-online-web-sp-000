@@ -60,7 +60,7 @@ class Song
       # Make a new instance
     song = self.new # self refers to the Person class. This is Person.new
       # Set the properties on the person.
-      song.artist = artist
+      song.artist_name = artist
       song.title = title
       #return the song
       song.artist
