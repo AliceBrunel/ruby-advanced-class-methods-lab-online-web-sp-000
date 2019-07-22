@@ -49,8 +49,26 @@ class Song
     end
   end 
   
-  def self.new_from_filename(song_name)
-    song_name.split("-")
+  def self.new_from_filename(title)
+    # Split the CSV data into an array of individual rows.
+    rows = song_name.split(" - ")
+    # For each row, let's collect a Person instance based on the data
+    song = rows.collect do |row|
+      # Split the row into 2 parts, artist name, title at the " - "
+      data = row.split(", ")
+      name = data[0]
+      age = data[1]
+      company = data[2]
+ 
+      # Make a new instance
+      person = self.new # self refers to the Person class. This is Person.new
+      # Set the properties on the person.
+      person.name = name
+      person.age = age
+      person.company = company
+      # Return the person to collect
+      person
+    end
   end 
   
   def self.create_from_filename
